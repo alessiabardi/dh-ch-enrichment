@@ -13,7 +13,7 @@ PYTHONHASHSEED=1
 
 
 # Download and uncompress spark from the apache archive
-RUN wget https://dlcdn.apache.org/spark/spark-3.5.3/spark-3.5.3-bin-hadoop3.tgz 
+RUN wget https://archive.apache.org/dist/spark/spark-3.5.3/spark-3.5.3-bin-hadoop3.tgz
 
 RUN mkdir -p /opt/
 RUN tar -xf spark-3.5.3-bin-hadoop3.tgz -C /opt/
