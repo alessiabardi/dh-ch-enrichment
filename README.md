@@ -1,6 +1,7 @@
-# OpenAIRE Graph Beginner's Kit
+# OpenAIRE DH-CH Enrichment
 
-This beginner's kit runs entirely in a Docker container so as to minimise the effort required to get started and the amount of software packages and frameworks to be installed.
+This project forks from the OpenAIRE's beginner kit to work on the metadata snapshot of the Digital Humanities and Cultural Heritage community (https://dh-ch.openaire.eu). 
+It runs entirely in a Docker container so as to minimise the effort required to get started and the amount of software packages and frameworks to be installed.
 Docker Engine is the only piece of software required.
 
 
@@ -17,7 +18,7 @@ First, `git clone` this repository, then open a Terminal window and get inside t
 Once you are in position, run the following command
 
 ```
-docker build --rm -t openaire-beginners-kit .
+docker build --rm -t dh-ch-enrichment .
 ```
 
 This will take care of everything is needed to create a Docker image; do not worry, building the image will take some time as Docker needs to fetch plenty of dependencies and try to virtualise an entire Apache Hadoop/Spark cluster on your local workstation.
@@ -26,12 +27,12 @@ At the end, you will have a sandboxed environment with Python, Jupyter notebooks
 
 # How to run/stop the container
 In order to **start** the container, open Docker Engine, locate the Docker image you just built and run it by clicking the Play icon (►), having care of specifying the port `8889` in the proper field.
-You can also provide Docker with a name for the container, e.g., `kit-container`.
+You can also provide Docker with a name for the container, e.g., `dh-ch-container`.
 
 You can run the container from the Terminal too with the following command
 
 ```
-docker run --name kit-container -p 8889:8889 openaire-beginners-kit
+docker run --name dh-ch-container -p 8889:8889 openaire-beginners-kit
 ```
 
 In order to stop the container, head back to Docker Engine, locate the running container and click on the Stop icon (&#9632;) in order to stop it. 
@@ -39,7 +40,7 @@ In order to stop the container, head back to Docker Engine, locate the running c
 You can **stop** the container from the Terminal too with the following command
 
 ```
-docker stop kit-container
+docker stop dh-ch-container
 ```
 
 Later, you can go again to Docker Engine to **restart** the container by clicking the Play icon (►). This will resume the container as you left it (data included).
@@ -47,17 +48,16 @@ Later, you can go again to Docker Engine to **restart** the container by clickin
 You can resume the container from the Terminal with the command
 
 ```
-docker restart kit-container
+docker restart dh-ch-container
 ```
 
 
-# Playing with the beginner's kit
-To start playing with OpenAIRE data, you need to head to JupiterLab and locate the Jupyter notebook we prepared.
+# Play with data
+To start playing with the OpenAIRE data for DH-CH, you need to head to JupiterLab and locate the Jupyter notebook we prepared.
 
 Upon starting the container you should see a bunch of logs.
 Locate a line containing something like `http://127.0.0.1:8889/lab?token=...`; that's our guy, click on it.
-The browser will open a page with JupyterLab.
+The browser will open a page with JupyterLab where you can open the notebook.
 
-Open the notebook `beginners_kit.ipynb`; this is where you can start playing with the OpenAIRE Graph.
-Just follow the instructions provided in there.
+
 
